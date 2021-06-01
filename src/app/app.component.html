@@ -1,0 +1,24 @@
+<h3>First Ans</h3>
+<input type="text"  [(ngModel)]="stringValue"  name="stringValue"  id="stringValue"><br>
+    <button class="editbtn"  (click)="findString(stringValue)" class="mrgin10">Show</button>
+        <h3>{{matchedValue}}</h3>
+        <br>
+
+        <h3>Third Ans</h3>
+        <input type="text" [(ngModel)]="fristValue" id="fristValue" style="margin-bottom:10px;">
+        <div *ngFor="let value of values; let i=index">
+            <input type="text" [(ngModel)]="value.value" #name="ngModel" name="value{{i}}" id="value{{i}}" style="margin: 10px 0px;">
+            <button (click)="removeValue(i)" class="mrgin10" style="margin: 0px 10px;">Remove</button>
+        </div><br>
+        <button (click)="addValue()" class="mrgin10">Add another phone number</button><br>
+        <button (click)="submitValue()">Submit</button>
+        <br><br>
+
+        <h3>Fourth Ans</h3>
+        <div id="parent" class="main">
+            <p>{{inputValue}}</p>
+            <p>{{inputValue}}</p>
+            <p>{{inputValue}}</p>
+            <p>{{inputValue}}</p>
+            <input class="sub" type="text" [(ngModel)]="inputValue">
+        </div>
